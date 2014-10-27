@@ -12,7 +12,7 @@ Untorch referral tool open-source clone based on Laravel (PHP) & Bootstrap3.
 
 ## Setup
 
-- Create new database and execute table creations in `data\unflr_schema.sql`
+- Create new database and execute table creations with `data\unflr_schema.sql`
 
 - Specifiy an environment variable in your .htaccess or nginx configuration file:
 ```shell
