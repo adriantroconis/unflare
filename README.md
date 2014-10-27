@@ -8,17 +8,19 @@ Untorch referral tool open-source clone based on Laravel (PHP) & Bootstrap3.
 - Memcached
 - Node.js (grunt)
 - Mandrill account
-- Mailcatcher (dev env)
+- Mailcatcher (for testing purposes)
 
 ## Setup
 
 - Create new database and execute table creations with `data\unflr_schema.sql`
 
 - Specifiy an environment variable in your .htaccess or nginx configuration file:
+
 ```shell
 DocumentRoot "/www/unflr/public/"
 SetEnv ENVIRONMENT development
 ```
+See [Laravel docs](http://laravel.com/docs/4.2/installation) for rewriting rules
 
 - Edit constants defined in the following files:
 	+ config\constants.development.php
@@ -36,6 +38,11 @@ cd unflr\assets\grunt\ && npm install && grunt
 ```shell
 php unflr\application\config\codecept run
 ```
+
+## TODO
+
+- Improve Doc
+- Decouple from Memcached & Mandrill
 
 ## Other
 
