@@ -1,0 +1,27 @@
+# folders
+/vendor/
+/assets/pages
+/assets/grunt/debug
+/assets/grunt/node_modules
+/assets/gulp/debug
+/assets/gulp/node_modules
+
+/public/packages
+/public/.htaccess
+/public/.htpasswd
+
+/data/backup/.data
+/data/backup/.cache/*
+/data/backup/.tmp/*
+/data/backup/log/*
+
+# temp folders
+/temp/debugbar
+/temp/cache/*
+/temp/logs/*
+/temp/minified/*
+/temp/session/*
+/temp/uploads/*
+
+# mac crap
+.DS_Store
