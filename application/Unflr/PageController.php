@@ -19,7 +19,7 @@ class PageController extends \Yeb\Laravel\PageController
 	protected function setHead()
 	{
 		$this->head = array_merge($this->head, [
-			'title'       => 'Aperikif' . ($this->title ? ' - '.$this->title : null),
+			'title'       => 'Unflare' . ($this->title ? ' - '.$this->title : null),
 			'description' => Config::get('unflr.marketing.description'),
 			'keywords'    => Config::get('unflr.marketing.keywords'),
  		]);

@@ -7,7 +7,7 @@ define('DEBUG', false);
 define('DOMAIN', 'www.unflare.com'); 
 define('PUBLIC_URL', '/');
 define('PUBLIC_FULL_URL', 'http://'.DOMAIN.PUBLIC_URL);
-define('ASSETS_URL', 'http://assets.'.DOMAIN.'/assets');
+define('ASSETS_URL', 'http://'.DOMAIN.'/assets');
 
 // database
 define('PG_HOST', 'localhost');
