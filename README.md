@@ -18,8 +18,6 @@ Send me your request at <younes.elbiache@gmail.com>, I'd be glad to help you!
 
 ## Setup
 
-- Install software:
-
 - Setup apache/nginx conf and don't forget to specifiy an environment variable (PRODUCTION or DEVELOPEMENT): 
 
 ```shell
@@ -29,7 +27,6 @@ Send me your request at <younes.elbiache@gmail.com>, I'd be glad to help you!
 	SetEnv ENVIRONMENT development
 
 	<Directory "/www/unflr/public/">
-		# http://laravel.com/docs/4.2/installation
 		<IfModule mod_negotiation.c>
 			Options -MultiViews
 		</IfModule>
@@ -65,6 +62,8 @@ npm install -g grunt && npm install && grunt
 ```
 
 - Create new database and execute table creations with `data\unflr_schema.sql`
+
+- Troubleshoots? Please refer to <http://laravel.com/docs/4.2/installation>
 
 ## Personalize Views
 
