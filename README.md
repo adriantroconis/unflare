@@ -47,9 +47,11 @@ Send me your request at <younes.elbiache@gmail.com>, I'd be glad to help you!
 
 - Edit constants defined in the following files:
 ```shell
-# mandrill, postgresql, google analytics params etc.
+# postgresql, google analytics params etc.
 config\constants.development.php
 config\constants.production.php
+# smtp, mandrill
+config\constants.all.php
 # marketing params
 config\unflr.php 
 ```
