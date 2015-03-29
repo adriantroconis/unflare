@@ -19,12 +19,26 @@ CREATE TABLE users (
 	-- other infos
 	"has_mobile_registered" boolean,
 	"extra" json,
+	"coupon" varchar not null,
 	-- timestamps
 	"created_at" timestamp,
 	"updated_at" timestamp,
 	primary key ("id"),
 	unique ("email"),
 	unique ("referral_code")
+);
+
+CREATE TABLE queues (
+	"id" bigserial, 
+	"queue" varchar,
+	"status" integer default 0,
+	"retries" integer default 0,
+	"timestamp" timestamp,
+	"payload" varchar,
+	-- timestamps
+	"created_at" timestamp,
+	"updated_at" timestamp,
+	primary key ("id")
 );
 
 CREATE TABLE failed_jobs (
@@ -35,3 +49,13 @@ CREATE TABLE failed_jobs (
 	"failed_at" timestamp,
 	primary key ("id")
 );
+
+-- Privileges
+-------------------------------
+-- app
+GRANT SELECT, UPDATE, INSERT, DELETE ON ALL TABLES IN SCHEMA public TO app;
+GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO app;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO app;
+-- read
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO read;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO read;

@@ -2,7 +2,7 @@
 
 return [
 
-	// Supported: "sync", "beanstalkd", "sqs", "iron"
+	// Supported: "sync", "beanstalkd", "sqs", "iron", "database"
 	'default' => QUEUE_CONNECTION,
 		
 	'connections' => [

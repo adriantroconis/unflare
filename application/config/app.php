@@ -63,6 +63,7 @@ return [
 		'Msurguy\Honeypot\HoneypotServiceProvider',
 		'Rosio\PhpToJavaScriptVariables\PhpToJavaScriptVariablesServiceProvider',
 		'Valorin\L4DownSafe\L4DownSafeServiceProvider',
+		'Davelip\Queue\DatabaseServiceProvider',
 
 		// Unflare
 		'Unflr\Provider',

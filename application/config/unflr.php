@@ -7,7 +7,7 @@ return [
 		'name'    => 'Unflare',
 	],
 
-	'referralsCountForSuccess'  => 5,
+	'referralsCountForSuccess'  => 2,
 	'minutesBeforeWelcomeEmail' => 0,
 
 	'emails' => [

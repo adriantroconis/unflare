@@ -37,7 +37,8 @@ $successCount  = Config::get('unflr.referralsCountForSuccess');
 						{{__('<i>Describe the offer</i>.')}}
 					</p>
 					<p>
-						{{__('Keep sharing the link below, new offers coming soon :)')}}
+						{{__('Here\'s your coupon: ')}}
+						{{$user['coupon']}}
 					</p>
 				@endif
 

@@ -49,12 +49,13 @@ class User
 
 		$this->email = $email;
 		$this->orm   = Eloquents\User::create([
-			'email'            => $email,
-			'ipaddress'        => $ipAddress,
-			'referral_code'    => $this->createReferralCode(),
-			'referred_by'      => $referrerCode,
-			'unsubscribe_guid' => Str::random(24),
+			'email'                 => $email,
+			'ipaddress'             => $ipAddress,
+			'referral_code'         => $this->createReferralCode(),
+			'referred_by'           => $referrerCode,
+			'unsubscribe_guid'      => Str::random(24),
 			'has_mobile_registered' => $isMobile,
+			'coupon'                => Str::random(10), // Phazon Coupon
 		]);
 
 		// referrer notif

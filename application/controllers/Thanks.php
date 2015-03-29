@@ -18,6 +18,7 @@ class Thanks extends \Unflr\PageController
 				'referralCount'   => $user->orm()->referral_count,
 				'referralLink'    => \uHelpers::referralLink($user->orm()->referral_code),
 				'message'         => Input::get('m'),
+				'user'            => $user->orm()->toArray(),
 			]);
 
 			return $this->render('web.root');
