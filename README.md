@@ -1,7 +1,5 @@
 # Unflare - Untorch clone
 
-[![Join the chat at https://gitter.im/younes0/unflare](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/younes0/unflare?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 Untorch referral tool open-source clone based on Laravel (PHP) & Bootstrap3.  
 Screenshots: [Landing Page](https://github.com/younes0/unflare/blob/master/data/docs/unflare-step1.png), [Form submitted](https://github.com/younes0/unflare/blob/master/data/docs/unflare-step2.png)
 
@@ -11,7 +9,7 @@ Untorch's cost per referred email is $0.50. I'd say that's an **expensive CPA** 
 
 ## Requirements
 
-- a [Dedicated Server](http://www.kimsufi.com/us/en/) or a [VPS hosting](https://www.digitalocean.com/pricing/) or anything that allows you to setup the required services (PostgreSQL, Memcached, Node.js).
+- a [Dedicated Server](http://www.kimsufi.com/us/en/) or a [VPS hosting](https://www.digitalocean.com/pricing/) or anything that allows you to setup the required services (Nginx, PHP, PostgreSQL, Memcached, Node.js).
 - a [Mandrill account](Mandrillapp.com) (free up to 12 000 emails per month) to send & track emails
 
 ## Do you need help to deploy?
@@ -40,11 +38,13 @@ npm install -g grunt && npm install && grunt
 
 - Create new database and execute table creations with `data\unflr_schema.sql`
 
+- Additionally, setup queue: change the queue driver to `database` and run the queue listener: <http://laravel.com/docs/4.2/queues#running-the-queue-listener>
+
 - Troubleshoots? Please refer to <http://laravel.com/docs/4.2/installation>
 
 ## Personalize Views
 
-All pages & emails views are stored in `unflr\application\` and use the Blade templating system and Gettext. You can change the copywriting by editing PO files stored in `lang`. 
+All pages & emails views are stored in `unflr\application\` and use the Blade templating system and Gettext. You can change the copywriting in .blade files directly or by editing PO files stored in `lang`. 
 
 According to Springsheld explanations video, it is advised to keep the same layout structure and copywriting length.
 

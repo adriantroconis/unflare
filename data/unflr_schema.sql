@@ -50,12 +50,12 @@ CREATE TABLE failed_jobs (
 	primary key ("id")
 );
 
--- Privileges
--------------------------------
--- app
-GRANT SELECT, UPDATE, INSERT, DELETE ON ALL TABLES IN SCHEMA public TO app;
-GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO app;
-GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO app;
--- read
-GRANT SELECT ON ALL TABLES IN SCHEMA public TO read;
-GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO read;
+-- -- Privileges
+-- -------------------------------
+-- -- app
+-- GRANT SELECT, UPDATE, INSERT, DELETE ON ALL TABLES IN SCHEMA public TO app;
+-- GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO app;
+-- GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO app;
+-- -- read
+-- GRANT SELECT ON ALL TABLES IN SCHEMA public TO read;
+-- GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO read;

@@ -5,7 +5,6 @@
 
 $canonical = str_replace('s:/', ':/', Request::url());
 $openGraph = [
-	// 'fb:app_id'      => FB_APP_ID,
 	'og:description' => $head['description'],
 	'og:title'       => $head['title'],
 	'og:type'        => 'website',
@@ -37,6 +36,7 @@ $openGraph = [
 	{{HTML::style('//cdn.jsdelivr.net/g/jquery.bootstrapvalidator@0.5.1')}}
 	{{HTML::style('//fonts.googleapis.com/css?family=Open+Sans')}}
 	{{hAsset::html('main.css')}}
+	{{HTML::style(ASSETS_URL.'/stylesheets/custom.css')}}
 
 </head>
 
