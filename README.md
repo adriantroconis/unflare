@@ -1,5 +1,7 @@
 # Unflare - Untorch clone
 
+[![Join the chat at https://gitter.im/younes0/unflare](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/younes0/unflare?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Untorch referral tool open-source clone based on Laravel (PHP) & Bootstrap3.  
 Screenshots: [Landing Page](https://github.com/younes0/unflare/blob/master/data/docs/unflare-step1.png), [Form submitted](https://github.com/younes0/unflare/blob/master/data/docs/unflare-step2.png)
 
@@ -47,9 +49,11 @@ Send me your request at <younes.elbiache@gmail.com>, I'd be glad to help you!
 
 - Edit constants defined in the following files:
 ```shell
-# mandrill, postgresql, google analytics params etc.
+# postgresql, google analytics params etc.
 config\constants.development.php
 config\constants.production.php
+# smtp, mandrill
+config\constants.all.php
 # marketing params
 config\unflr.php 
 ```
