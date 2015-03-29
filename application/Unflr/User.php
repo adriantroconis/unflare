@@ -55,7 +55,7 @@ class User
 			'referred_by'           => $referrerCode,
 			'unsubscribe_guid'      => Str::random(24),
 			'has_mobile_registered' => $isMobile,
-			'coupon'                => Str::random(10), // Phazon Coupon
+			'coupon'                => Str::random(10),
 		]);
 
 		// referrer notif

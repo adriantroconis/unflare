@@ -20,40 +20,13 @@ Send me your request at <younes.elbiache@gmail.com>, I'd be glad to help you!
 
 ## Setup
 
-- Setup apache/nginx conf and don't forget to specifiy an environment variable (PRODUCTION or DEVELOPEMENT): 
-
-```shell
-<VirtualHost *:80>
-	ServerName www.unflare.com
-	DocumentRoot "/www/unflr/public/"
-	SetEnv ENVIRONMENT development
-
-	<Directory "/www/unflr/public/">
-		<IfModule mod_negotiation.c>
-			Options -MultiViews
-		</IfModule>
-
-		Options +FollowSymLinks
-		RewriteEngine On
-		
-		# Redirect Trailing Slashes...
-		RewriteRule ^(.*)/$ /$1 [L,R=301]
-		
-		# Handle Front Controller...
-		RewriteCond %{REQUEST_FILENAME} !-d
-		RewriteCond %{REQUEST_FILENAME} !-f
-		RewriteRule ^ index.php [L]
-	</Directory>
-</VirtualHost>
-```
+- Setup Nginx and use configuration templates located in data/nginx
 
 - Edit constants defined in the following files:
 ```shell
 # postgresql, google analytics params etc.
 config\constants.development.php
 config\constants.production.php
-# smtp, mandrill
-config\constants.all.php
 # marketing params
 config\unflr.php 
 ```
