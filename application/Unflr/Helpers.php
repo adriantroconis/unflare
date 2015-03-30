@@ -56,7 +56,7 @@ class Helpers
 
 	static public function emailLink($url, $title = null, Array $attr = []) 
 	{
-		return HTML::link(PUBLIC_FULL_URL.$url, $title, $attr);
+		return HTML::link(PUBLIC_FULL_URL. '/ '. $url, $title, $attr);
 	}
 
 	static public function emailPrimaryLink($url, $title, Array $attr = [])
