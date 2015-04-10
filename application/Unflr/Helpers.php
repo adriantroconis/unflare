@@ -24,7 +24,7 @@ class Helpers
 
 		Mail::later($date, 'layouts.email', $data, function($message) use ($to, $data, $type) {
 			
-			$from = \Config::get('unflr.mailFrom');
+			$from = \Config::get('unflare.mailFrom');
 
 			$message
 				->to($to)

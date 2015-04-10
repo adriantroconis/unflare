@@ -20,7 +20,7 @@ class Root extends \Unflr\PageController
 		// abtesting
 		$this->data['abFirstStepForm'] = (Input::get('v') == 2)
 			? true
-			: \Config::get('unflr.abtesting.firstStepForm');
+			: \Config::get('unflare.abtesting.firstStepForm');
 		
 		return $this->render('web.root');
 	}

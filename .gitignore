@@ -1,13 +1,9 @@
-# folders
+/application/constants.php
 /vendor/
-/assets/pages
-/assets/grunt/debug
-/assets/grunt/node_modules
-/assets/gulp/debug
-/assets/gulp/node_modules
+/public/assets/grunt/debug
+/public/assets/grunt/node_modules
 
 /public/packages
-/public/.htaccess
 /public/.htpasswd
 
 /data/backup/.data

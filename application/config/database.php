@@ -12,14 +12,15 @@ return [
 	'connections' => [
 
 		'main' => [
-			'driver'   => 'pgsql',
-			'host'     => PG_HOST,
-			'database' => PG_APP_DBNAME,
-			'username' => PG_USER,
-			'password' => PG_PASSWORD,
+			'driver'   => DB_TYPE,
+			'host'     => DB_HOST,
+			'database' => DB_APP_DBNAME,
+			'username' => DB_USER,
+			'password' => DB_PASSWORD,
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
+			'collation' => (DB_TYPE === 'mysql') ? 'utf8_unicode_ci' : null,
 		],
 		
 	],

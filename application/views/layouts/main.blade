@@ -35,8 +35,13 @@ $openGraph = [
 	{{HTML::style('//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.css')}}
 	{{HTML::style('//cdn.jsdelivr.net/g/jquery.bootstrapvalidator@0.5.1')}}
 	{{HTML::style('//fonts.googleapis.com/css?family=Open+Sans')}}
-	{{hAsset::html('main.css')}}
-	{{HTML::style(ASSETS_URL.'/stylesheets/custom.css')}}
+
+	@if (SHARED_HOSTING)
+		{{HTML::styleBust(ASSETS_URL.'/dist/main.css')}}
+	@else
+		{{hAsset::html('main.css')}}
+	@endif
+	{{HTML::styleBust(ASSETS_URL.'/dist/custom.css')}}
 
 </head>
 
@@ -71,8 +76,14 @@ $openGraph = [
 	{{HTML::script('//cdn.jsdelivr.net/g/jquery@2.1,bootstrap@3.1.0,jquery.bootstrapvalidator@0.5.1')}}
 
 	<!-- js local -->
-	{{hAsset::html('main.js')}}
-	{{hAsset::html('locale_en.js')}}
+	@if (SHARED_HOSTING)
+		{{HTML::scriptBust(ASSETS_URL.'/dist/main.js')}}
+		{{HTML::scriptBust(ASSETS_URL.'/dist/locale_en.js')}}
+	@else
+		{{hAsset::html('main.js')}}
+		{{hAsset::html('locale_en.js')}}	
+	@endif
+	{{HTML::script(ASSETS_URL.'/dist/custom.js')}}
 
 </body>
 </html>

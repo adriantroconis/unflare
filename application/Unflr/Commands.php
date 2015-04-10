@@ -23,7 +23,7 @@ class MandrillTest extends Command
 
 		\Mail::send('layouts.email', $data, function($message) {
 			
-			$from = \Config::get('unflr.mailFrom');
+			$from = \Config::get('unflare.mailFrom');
 
 			$message
 				->to('email@gmail.com')

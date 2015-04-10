@@ -22,9 +22,6 @@ class Webhooks extends \BaseController
 		if ($event === 'hard_bounce') {
 			$user->orm()->update([
 				'email_has_bounced'  => true,
-				'extra' => array_merge($user->orm()->extra, [
-					'bounce_description' => $msg['bounce_description'],
-				]),
 			]);
 
 		} else if ($event === 'open') {

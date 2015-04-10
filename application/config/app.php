@@ -56,7 +56,7 @@ return [
 		'Yeb\ServiceProviders\Bindings',
 
 		// vendor
-		'Barryvdh\Debugbar\ServiceProvider',
+		'MetalMatze\Html\HtmlServiceProvider',
 		'Crhayes\BladePartials\ViewServiceProvider',
 		'Indatus\Dispatcher\ServiceProvider',
 		'Jenssegers\Agent\AgentServiceProvider',
@@ -95,7 +95,6 @@ return [
 		
 		// vendor
 		'Agent'     => 'Jenssegers\Agent\Facades\Agent',
-		'Debugbar'  => 'Barryvdh\Debugbar\Facade',
 		'Image'     => 'Intervention\Image\Facades\Image',
 		'Datatable' => 'Chumper\Datatable\Facades\DatatableFacade',
 		

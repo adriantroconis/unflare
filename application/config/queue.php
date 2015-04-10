@@ -11,6 +11,10 @@ return [
 			'driver' => 'sync',
 		],
 
+		'database' => [
+			'driver' => 'database',
+			'queue'  =>  null, // optional, can be null or any string
+		],
 	],
 
 	'failed' => [

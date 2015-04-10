@@ -1,4 +1,4 @@
--- Unflr App Schema
+-- Unflare App Schema
 -- ==========================================================
 
 CREATE TABLE users (
@@ -18,7 +18,6 @@ CREATE TABLE users (
 	"referred_by" varchar, 
 	-- other infos
 	"has_mobile_registered" boolean,
-	"extra" json,
 	"coupon" varchar not null,
 	-- timestamps
 	"created_at" timestamp,

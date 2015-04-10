@@ -13,9 +13,9 @@ settings:
 modules:
     config:
         Db:
-            dsn     : 'pgsql:host=localhost;dbname=unflr'
+            dsn     : 'pgsql:host=localhost;dbname=unflare'
             user    : 'admin'
             password: 'postgres'
-            dump    : ../../data/unflr_schema.sql
+            dump    : ../../data/unflare_pgsql_schema.sql
             cleanup : false #  should the dump be reloaded after each test
             populate: false #  should the dump be reloaded before test suite

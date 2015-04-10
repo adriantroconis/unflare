@@ -1,15 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-// Environment
-foreach ($argv as $arg) {
-	foreach (array('development', 'stage', 'production') as $env) {
-		if ($arg === '--env='.$env) {
-			putenv('ENVIRONMENT='.$env);
-		}
-	}
-}
-
 // Bootstrap & load Laravel
 define('ARTISAN', true);
 require 'bootstrap.php';

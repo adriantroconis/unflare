@@ -97,15 +97,15 @@ class User
 		$data = ['user' => $this->orm()];
 
 		// when
-		$minutes = Config::get('unflr.minutesBeforeWelcomeEmail');
+		$minutes = Config::get('unflare.minutesBeforeWelcomeEmail');
 		$date    = Carbon::now()->addMinutes($minutes);
-		$subject = Config::get('unflr.emails.welcome.subject');
+		$subject = Config::get('unflare.emails.welcome.subject');
 		Helpers::sendEmail('welcome', $data, $subject, $this->email, $date);
 	}
 
 	protected function addReferralSuccess()
 	{
-		$successCount = Config::get('unflr.referralsCountForSuccess');
+		$successCount = Config::get('unflare.referralsCountForSuccess');
 
 		$this->orm()->referral_count++;
 		$this->orm()->save();
@@ -117,7 +117,7 @@ class User
 
 		// send email
 		$type     = ($count === $successCount) ? 'referralSuccess' : 'referralNotif';
-		$subject = __(Config::get('unflr.emails')[$type]['subject'], $count, $successCount);
+		$subject = __(Config::get('unflare.emails')[$type]['subject'], $count, $successCount);
 	
 		Helpers::sendEmail($type, ['user' => $this->orm()], $subject, $this->email);	
 

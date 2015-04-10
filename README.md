@@ -5,54 +5,53 @@ Untorch referral tool open-source clone based on Laravel (PHP) & Bootstrap3.
 - **Demo** on : <http://unflare.yebsoft.com>
 - Screenshots: [Landing Page](https://github.com/younes0/unflare/blob/master/data/docs/unflare-step1.png), [Form submitted](https://github.com/younes0/unflare/blob/master/data/docs/unflare-step2.png)
 
-## Unflare vs Untorch 
+## Non-technical?
 
-Untorch's cost per referred email is $0.50. I'd say that's an **expensive CPA** (cost per action), especially when your product doesn't make money yet.
+Use [Kickofflab](http://kickofflabs.com/): <https://www.youtube.com/watch?t=160&v=QnPb8UvVC5o>
 
 ## Requirements
 
-- a [Dedicated Server](http://www.kimsufi.com/us/en/) or a [VPS hosting](https://www.digitalocean.com/pricing/) or anything that allows you to setup the required services (Nginx, PHP, PostgreSQL, Memcached, Node.js).
+- LAMP Shared Hosting: PHP 5.4, MySQL (or PostgreSQL), Apache with Rewriting or (Nginx)
 - a [Mandrill account](Mandrillapp.com) (free up to 12 000 emails per month) to send & track emails
-
-## Do you need help to deploy?
-
-Send me your request at <younes.elbiache@gmail.com>, I'd be glad to help you!
 
 ## Setup
 
-- Setup Nginx and use configuration templates located in data/nginx
-
-- Edit constants defined in the following files:
+- GIT clone Repo or Copy files to your Host server
+- PHP: Setup dependencies
 ```shell
-# postgresql, google analytics params etc.
-config\constants.development.php
-config\constants.production.php
-# marketing params
-config\unflr.php 
+php unflare\application\config\composer install
 ```
+- Database: Create new database and execute table creations with `data\unflare_mysql_schema.sql`. There's also a postgres version. 
+- Web Server: Point Apache virtualhost entry point to `public/` folder. There's also an Nginx configuration in `data/nginx.conf`
+- Copy `application\constants.EXAMPLE.php` to 'application\constants.php` and edit parameters.
+- Change  `config\unflare.php` according to your needs
 
-- Dependencies
-```shell
-php unflr\application\config\composer install
-cd unflr\assets\grunt\ 
-npm install -g grunt && npm install && grunt
+### Troubleshoots?
+ 
+
+- if your Apache setup points to a different folder from `public` (let's say `htdocs`), change the value in `bootstrap.php` 
+```php
+// define('ASSETS_PATH', ROOT_PATH. 'public/assets/');
+// define('ASSETS_PATH', ROOT_PATH. 'htdocs/assets/');
 ```
+- check logs in `/temp/logs/*.log`
 
-- Create new database and execute table creations with `data\unflr_schema.sql`
+## Customize Views
 
-- Additionally, setup queue: change the queue driver to `database` and run the queue listener: <http://laravel.com/docs/4.2/queues#running-the-queue-listener>
-
-- Troubleshoots? Please refer to <http://laravel.com/docs/4.2/installation>
-
-## Personalize Views
-
-All pages & emails views are stored in `unflr\application\` and use the Blade templating system and Gettext. You can change the copywriting in .blade files directly or by editing PO files stored in `lang`. 
+All pages & emails views are stored in `unflare\application\` and use the Blade templating system and Gettext. You can change the copywriting in .blade files directly or by editing PO files stored in `lang`. 
 
 According to Springsheld explanations video, it is advised to keep the same layout structure and copywriting length.
+
+## Assets sources (Expert)
+
+- Use Nginx provided configuration or Add tp Apache the following directive:
+`Alias /minified / /www/unflare/temp/minified`
+- Set `SHARED_HOSTING` to false to use minified folder
+- Run Grunt: 
+```shell
+cd unflare\assets\grunt\ && npm install -g grunt && npm install && grunt
+```
 
 ## Other
 
 - Logo by logoinstant: http://www.logoinstant.com/modern-flow-logo/
-- TODO:
-	* make facebook sharing optional
-	* decouple from Memcached

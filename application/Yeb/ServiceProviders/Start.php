@@ -94,11 +94,7 @@ class Start extends ServiceProvider
 		});
 	}
 
-	protected function routes()
-	{
-		\Route::any('/packages/maximebf/php-debugbar/vendor/jquery/dist/jquery.min.map', function() {
-			return null;
-		});
-	}
+	protected function routes() {}
+
 	
 }

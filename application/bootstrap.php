@@ -9,7 +9,7 @@ define('ROOT_PATH', __DIR__.'/../');
 
 // root paths
 define('TEMP_PATH', ROOT_PATH.'temp/');
-define('ASSETS_PATH', ROOT_PATH.'assets/');
+define('ASSETS_PATH', ROOT_PATH.'public/assets/');
 define('DATA_PATH', ROOT_PATH.'data/');
 define('VENDOR_PATH', ROOT_PATH.'vendor/');
 
@@ -27,9 +27,8 @@ define('UPLOADS_PATH', TEMP_PATH.'uploads/');
 
 // environment
 // =========================================================
-define('ENVIRONMENT', getenv('ENVIRONMENT') ?: 'development');
-require CONFIG_PATH.'constants.'.ENVIRONMENT.'.php';
-require CONFIG_PATH.'constants.all.php';
+define('ENVIRONMENT', 'production');
+require 'constants.php';
 
 // composer
 // =========================================================

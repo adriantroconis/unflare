@@ -11,7 +11,6 @@ class User extends ExtendedEloquent
 	public $table = 'users';
 	public $primaryKey = 'id';
 	public $timestamps = true;
-	protected $jsonFields    = ['extra'];
 	protected $booleanFields = [
 		'email_was_opened',
 		'email_has_bounced',

@@ -9,9 +9,8 @@ class PageController extends \Yeb\Laravel\PageController
 
 	public function __construct()
 	{
-		$this->appAlias = 'unflr';
+		$this->appAlias = 'unflare';
 		parent::__construct();
-		\Debugbar::disable();
 	}
 
 // overrides
@@ -20,8 +19,8 @@ class PageController extends \Yeb\Laravel\PageController
 	{
 		$this->head = array_merge($this->head, [
 			'title'       => 'Unflare' . ($this->title ? ' - '.$this->title : null),
-			'description' => Config::get('unflr.marketing.description'),
-			'keywords'    => Config::get('unflr.marketing.keywords'),
+			'description' => Config::get('unflare.marketing.description'),
+			'keywords'    => Config::get('unflare.marketing.keywords'),
  		]);
 	}
 

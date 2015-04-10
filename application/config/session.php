@@ -3,7 +3,7 @@
 return [
 
 	// Default Session Driver ("native", "cookie", "database", "apc", "memcached", "redis", "array")
-	'driver' => 'memcached',
+	'driver' => 'native',
 
 	// Session Lifetime (minutes)
 	'lifetime' => 120,
