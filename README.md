@@ -32,7 +32,7 @@ php unflare\application\config\composer install
 - if your Apache setup points to a different folder from `public` (let's say `htdocs`), change the value in `bootstrap.php` 
 ```php
 // define('ASSETS_PATH', ROOT_PATH. 'public/assets/');
-// define('ASSETS_PATH', ROOT_PATH. 'htdocs/assets/');
+define('ASSETS_PATH', ROOT_PATH. 'htdocs/assets/');
 ```
 - check logs in `/temp/logs/*.log`
 
