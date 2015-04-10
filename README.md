@@ -1,9 +1,7 @@
 # Unflare - Untorch clone
 
 Untorch referral tool open-source clone based on Laravel (PHP) & Bootstrap3.  
-
-- **Demo** on : <http://unflare.yebsoft.com>
-- Screenshots: [Landing Page](https://github.com/younes0/unflare/blob/master/data/docs/unflare-step1.png), [Form submitted](https://github.com/younes0/unflare/blob/master/data/docs/unflare-step2.png)
+**Demo** on : <http://unflare.yebsoft.com>
 
 ## Non-technical?
 
@@ -27,9 +25,8 @@ php unflare\application\config\composer install
 - Change  `config\unflare.php` according to your needs
 
 ### Troubleshoots?
- 
 
-- if your Apache setup points to a different folder from `public` (let's say `htdocs`), change the value in `bootstrap.php` 
+- if your Apache setup points to a different folder from `public` (let's say `htdocs`), change the value in `bootstrap.php`:  
 ```php
 // define('ASSETS_PATH', ROOT_PATH. 'public/assets/');
 define('ASSETS_PATH', ROOT_PATH. 'htdocs/assets/');
