@@ -38,13 +38,13 @@ define('ASSETS_PATH', ROOT_PATH. 'htdocs/assets/');
 
 ## Customize Views
 
-All pages & emails views are stored in `unflare\application\` and use the Blade templating system and Gettext. You can change the copywriting in .blade files directly or by editing PO files stored in `lang`. 
+All pages & emails views are stored in `unflare\application\views` and use the Laravel Blade templating system.
 
 According to Springsheld explanations video, it is advised to keep the same layout structure and copywriting length.
 
-## Assets sources (Expert)
+## Assets source compiling (Expert)
 
-- Use Nginx provided configuration or Add tp Apache the following directive:
+- Use Nginx provided configuration or add to Apache the following directive:
 `Alias /minified / /www/unflare/temp/minified`
 - Set `SHARED_HOSTING` to false to use minified folder
 - Run Grunt: 
